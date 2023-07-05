@@ -1,0 +1,68 @@
+body { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto, sans-serif;
+
+    height: 100vh;
+}
+
+.button {
+    width: 100%;
+    padding: 16px;
+
+    text-align: center;
+    font-weight: bold;
+    background: #D02090;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #C71585;
+}
+
+details > div {
+    margin: auto;
+    width: 360px;
+    height: 240px;
+    padding: 16px 32px;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+
+    z-index: 3;
+    background: white;
+    border: 2px solid black;
+    box-shadow: 10px 10px 10px #696969;
+}
+
+details[open] summary::after { 
+    content: "×"; 
+    font-size: 32px;  
+    color: black;
+
+    z-index: 9;
+    position: fixed; 
+    right: calc(50vw - 360px / 2 - 32px); 
+    top:  calc(50vh - 240px / 2 - 16px);
+}
+
+details[open] summary::before {
+    content: '';
+    display: block;
+    width: 100vw;
+    height: 100vh;
+
+    background: black;
+    opacity: 0.5;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
